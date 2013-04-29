@@ -12,8 +12,8 @@ $ git clone git@github.com:Shougo/neobundle.vim.git
 その他は下記のように。
 ```
 $ cd
-$ ln -s /usr/local/Cellar/git/1.8.1.5/etc/bash_completion.d/git-completion.bash git-completion.bash
-$ ln -s /usr/local/Cellar/git/1.8.1.5/etc/bash_completion.d/git-prompt.sh git-prompt.sh
+$ ln -s /opt/boxen/homebrew/Cellar/git/1.8.0-boxen1/etc/bash_completion.d/git-completion.bash git-completion.bash
+$ ln -s /opt/boxen/homebrew/Cellar/git/1.8.0-boxen1/share/git-core/contrib/completion/git-prompt.sh git-prompt.sh
 $ ln -s dotfiles/.bashrc .bashrc
 $ ln -s dotfiles/.vimrc .vimrc
 $ source ~/.bashrc
