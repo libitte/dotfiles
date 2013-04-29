@@ -7,7 +7,7 @@ $ cd ~/dotfiles/.vim/bundle
 $ git clone git@github.com:Shougo/vimproc.git
 $ git clone git@github.com:Shougo/neobundle.vim.git
 ```
-```:NeoBundleInstall```で必要なものインストール。
+:NeoBundleInstallで必要なものインストール。
 
 その他は下記のように。
 ```
