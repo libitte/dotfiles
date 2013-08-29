@@ -19,6 +19,8 @@ $ ln -s dotfiles/.vimrc .vimrc
 $ source ~/.bashrc
 ```
 
-TODO:
-近いうちセットアップスクリプト作成する。
+##TODO:
+
+* 近いうちセットアップスクリプト作成する。
+* boxen やめたい
 
