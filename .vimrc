@@ -15,7 +15,6 @@ filetype off                   " Required!
 
 if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
-
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -78,6 +77,11 @@ endif
 "set t_Co=256
 set laststatus=2
 
+" Highlight invisible characters
+set list
+set lcs=tab:>-,trail:_,extends:>,precedes:<,nbsp:x
+"set listchars=tab:>-,trail:-,nbsp:%
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -99,7 +103,7 @@ let &guicursor = &guicursor . ",a:blinkon0"
 
 set number
 set autoindent
-"set expandtab
+" set expandtab
 set tabstop=4
 set shiftwidth=4
 if has("autocmd")
