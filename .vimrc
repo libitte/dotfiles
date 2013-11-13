@@ -39,6 +39,7 @@ NeoBundle 'altercation/solarized'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'petdance/vim-perl'
 NeoBundle 'hotchpotch/perldoc-vim'
+NeoBundle 'thinca/vim-ft-clojure'
 
 
 " Only do this part when compiled with support for autocommands
@@ -80,7 +81,6 @@ set laststatus=2
 " Highlight invisible characters
 set list
 set lcs=tab:>-,trail:_,extends:>,precedes:<,nbsp:x
-"set listchars=tab:>-,trail:-,nbsp:%
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.

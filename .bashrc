@@ -3,12 +3,13 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export PATH=/usr/bin/X11:$PATHexport PATH=/usr/sbin:$PATH
+export PATH=/usr/bin/X11:$PATH
+export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 #export PATH=/var/qmail/bin:$PATH
 #export PATH=/usr/local/apache/bin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=.:$PATH
+#export PATH=.:$PATH
 
 #export CVSROOT=cvsadmin@moba-cvs:/home/cvsadmin/cvsrep
 #export CVS_RSH=ssh
@@ -33,6 +34,9 @@ alias tmux="/usr/local/bin/tmux -2 -u"
 alias vim="/usr/bin/vim -u $HOME/.vimrc"
 alias from_unixtime="perl -e 'for(@ARGV){@t=localtime(\$_);printf(\"\$_\t%d/%02d/%02d %02d:%02d:%02d\n\",@t[5]+1900,@t[4]+1,@t[3],@t[2],@t[1],@t[0])}'"
 
+alias headmem='ps alx|head -n1 && ps alxh|sort -nrk7|head -n 20'
+alias headcpu='ps aux|sort -rk 3,4|head -n 20'
+
 # cpanm
 export PERL_CPANM_OPT="--local-lib=~/perl5"
 export PATH=$HOME/perl5/bin:$PATH;
@@ -40,19 +44,22 @@ export PERL5LIB=$HOME/perl5/lib/perl5:$PERL5LIB;
 #export PERL_CPANM_OPT="--local-lib=~/extlib"
 #export PERL5LIB="$HOME/extlib/lib/perl5:$HOME/extlib/lib/perl5/i386-linux-thread-multi:$PERL5LIB"
 
+alias ls="ls -G"
 alias cp="cp -i"
 alias rm="rm -i"
-alias findmod="find `perl -e 'print join(" ", @INC)'` -type f -name \"*.pm\""
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
-#git
+#git settings
 #source /usr/local/Cellar/git/1.8.0/etc/bash_completion.d/git-completion.bash
 #source /usr/local/Cellar/git/1.8.0/etc/bash_completion.d/git-prompt.sh
 #source /usr/local/Cellar/git/1.8.1.5/etc/bash_completion.d/git-completion.bash
 #source /usr/local/Cellar/git/1.8.1.5/etc/bash_completion.d/git-prompt.sh
 source ~/git-completion.bash
 source ~/git-prompt.sh
-#PS1="\u@\h:\w\$(__git_ps1)> "
-PS1="\u@\h:\w\$(__git_ps1)\n$ "
+#PS1="\u@\h:\w\$(__git_ps1)\n$ "
+GIT_PS1_SHOWDIRTYSTATE=true
+#export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ '
+export PS1="\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]\$(__git_ps1)\[\033[00m\]\n\$ "
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -60,3 +67,4 @@ eval "$(rbenv init -)"
 NODE_PATH=~/.nvm/v0.10.0/lib/node_modules; export NODE_PATH
 source ~/.nvm/nvm.sh
 nvm use "v0.10.0"
+
