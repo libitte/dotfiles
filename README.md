@@ -1,3 +1,5 @@
+#outdated(20140427)
+
 dotfiles
 ========
 vimrcを有効にするには下記のようにbundleをいれる必要がある。
